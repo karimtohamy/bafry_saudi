@@ -1,6 +1,24 @@
 <template>
     <div>
         <ImageSlider/>
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+        <div>products</div> 
+
     </div>
 </template>
 
