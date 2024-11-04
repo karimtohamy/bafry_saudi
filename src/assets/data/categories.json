@@ -1,0 +1,149 @@
+[
+  {
+    "category": "Disinfectants",
+    "products": [
+      {
+        "name": "D-H/S Ions",
+        "slug": "d-h-s-ions",
+        "desc": "The Latest Exclusive Multipurpose Disinfectant Long acting & Broad Spectrum"
+      },
+      {
+        "name": "D-Q/A Cloud",
+        "slug": "d-q-a-cloud",
+        "desc": "More Than Usual Disinfectant nanotechnology",
+        "label": "ECO-FRIENDLY"
+      },
+      {
+        "name": "D-H/P Oligodynamic",
+        "slug": "d-h-p-oligodynamic",
+        "desc": "More Than Exepct Enhance Product Quality Several in one",
+        "label": "ECO-FRIENDLY"
+      },
+      {
+        "name": "D–Euterpflege",
+        "slug": "d-euterpflege",
+        "desc": "The Latest Exclusive Multipurpose Disinfectant For animals environments Long acting & Broad spectrum"
+      },
+      {
+        "name": "Anti Keime",
+        "slug": "anti-keime",
+        "desc": "A Ready to use environment disinfectant For All Applications Long Acting Broad spectrum"
+      }
+    ]
+  },
+  {
+    "category": "Pre-Disinfectants",
+    "products": [
+      {
+        "name": "PD-O",
+        "slug": "pd-o",
+        "desc": "Cleaning agent with strong activity to inhibit micro-organisms, special formula in acidic media, low foam"
+      },
+      {
+        "name": "P-D/L",
+        "slug": "p-d-l",
+        "desc": "Cleaning agent with strong activity to inhibit micro-organisms, special formula in alkaline media, non-foam"
+      },
+      {
+        "name": "P-D/N",
+        "slug": "p-d-n",
+        "desc": "Cleaning agent with strong activity to inhibit micro-organisms, special formula in natural media, high foam"
+      },
+      {
+        "name": "P-D/P",
+        "slug": "p-d-p",
+        "desc": "Cleaning agent with strong activity to inhibit micro-organisms, special formula in natural media, high foam with distinctive odor"
+      }
+    ]
+  },
+  {
+    "category": "Removers",
+    "products": [
+      {
+        "name": "A-D/X",
+        "slug": "a-d-x",
+        "desc": "Suitable for all applications, provides effective cleaning at normal or warm temperature"
+      },
+      {
+        "name": "SMC",
+        "slug": "smc",
+        "desc": "Mixture of ingredients with carboxylic acid to dissolve rust and act as a corrosion inhibitor, stabilized with complex substances"
+      },
+      {
+        "name": "Stain Remover",
+        "slug": "stain-remover",
+        "desc": "Mixture of cleaning solvents, emulsifier, surfactant, and removers with disinfectant power to remove oil spots and organic stains"
+      }
+    ]
+  },
+  {
+    "category": "Hand Care",
+    "products": [
+      {
+        "name": "Hand Soap",
+        "slug": "hand-soap",
+        "desc": "Cleaning dirtiness & moisturizer for hands"
+      },
+      {
+        "name": "Hand Soap (Antibacterial)",
+        "slug": "hand-soap-antibacterial",
+        "desc": "Double action cleaning & sterilizer in one shot"
+      },
+      {
+        "name": "Hand Sanitizer (Gel)",
+        "slug": "hand-sanitizer-gel",
+        "desc": "Highest sterilizer hygienic hand gel"
+      },
+      {
+        "name": "Hand Sanitizer (Liquid)",
+        "slug": "hand-sanitizer-liquid",
+        "desc": "A ready-to-use disinfectant for all applications, long-acting broad spectrum"
+      }
+    ]
+  },
+  {
+    "category": "Detergents",
+    "products": [
+      {
+        "name": "D-T/11",
+        "slug": "d-t-11",
+        "desc": "Concentrated mild alkaline formulation designed to remove grease, oils, solder paste, and flux residue from metal, plastic, and ceramic surfaces"
+      },
+      {
+        "name": "D-T/C",
+        "slug": "d-t-c",
+        "desc": "Concentrated acidic detergent ideal for removing salts, scale, and metal-oxide; also used for metal brightening and pharmaceutical-process equipment"
+      },
+      {
+        "name": "D-T/N",
+        "slug": "d-t-n",
+        "desc": "Concentrated neutral detergent ideal for removing salts, scale, and metal-oxide; also used for metal brightening and pharmaceutical-process equipment"
+      }
+    ]
+  },
+  {
+    "category": "Carrier",
+    "products": [
+      {
+        "name": "Foam",
+        "slug": "foam",
+        "desc": "This foaming agent is a special formula from Bafry Product Co. Compatible with Bafry products, all types of anionic & nonionic products"
+      },
+      {
+        "name": "Acidic Foam",
+        "slug": "acidic-foam",
+        "desc": "Ideal for the removal of salts, scale, metal-oxide, and metal brightening; also used for pharmaceutical-process equipment"
+      },
+      {
+        "name": "Alkaline Foam",
+        "slug": "alkaline-foam",
+        "desc": "Concentrated foaming cleanser ideal for the removal of salts, scale, metal-oxide, and metal brightening; also used for pharmaceutical-process equipment"
+      },
+      {
+        "name": "DCS",
+        "slug": "dcs",
+        "desc": "Works in hard water as anti-scaling and in soft water due to its chelating power"
+      }
+    ]
+  }
+]
