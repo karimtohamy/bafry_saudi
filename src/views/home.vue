@@ -1,28 +1,12 @@
 <template>
     <div>
         <ImageSlider/>
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-        <div>products</div> 
-
+        <Mission/>
     </div>
 </template>
 
 <script setup>
+import Mission from '@/components/mission.vue';
 import ImageSlider from '@/components/ui/imageSlider.vue';
 
 </script>
