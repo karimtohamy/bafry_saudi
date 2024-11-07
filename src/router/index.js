@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import i18n  from '@/i18n';  // Import the i18n instance directly
 import Home from '@/views/home.vue';
 import Applayout from '@/layouts/applayout.vue';
