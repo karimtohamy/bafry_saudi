@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ImageSlider/>
+        <ImageSlider />
         <Mission/>
     </div>
 </template>

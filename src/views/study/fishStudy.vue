@@ -1,6 +1,6 @@
 <template>
     <div>
-       qwertyuiop[xfghjkl;cvbn,./fghkl;] 
+        
     </div>
 </template>
 

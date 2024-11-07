@@ -25,13 +25,32 @@
 </template>
 
 <script setup>
-import faqs from '@/assets/data/faq.json'; // Directly import the JSON file
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+const faqs = ref([]);
 
-// State to track which FAQ is active
+// Active index to toggle FAQ answers
 const activeIndex = ref(null);
 
-// Method to toggle the FAQ visibility
+// Access the current locale from vue-i18n
+const { locale } = useI18n();
+const route = useRoute();
+
+onMounted(async () => {
+   // Get the current language (from the route params or i18n locale)
+   const lang = route.params.lang || locale.value || 'en';
+   
+   try {
+      // Dynamically import the JSON file based on language
+      const categoriesModule = await import(`@/lang/${lang}/faq.json`);
+      faqs.value = categoriesModule.default; // Access the imported JSON data
+   } catch (error) {
+      console.error('Error loading categories:', error);
+   }
+});
+
+// Function to toggle FAQ answer visibility
 const toggleFAQ = (index) => {
    activeIndex.value = activeIndex.value === index ? null : index;
 };
