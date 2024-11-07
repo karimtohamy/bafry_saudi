@@ -1,10 +1,10 @@
 <template>
     <header class="max-x-screen">
         <div class="bg-slate-200 hidden invisible lg:visible lg:flex w-full items-center justify-center top-0 py-2">
-            <router-link class="absolute" :class="[ currentLanguage == 'ar'?'right-6' : 'left-6']"
-                :to="{ name: 'home', params:{lang:currentLanguage} }">
+            <router-link class="absolute" :class="[currentLanguage == 'ar' ? 'right-6' : 'left-6']"
+                :to="{ name: 'home', params: { lang: currentLanguage } }">
 
-                <img src="@/assets/images/Logo.jpg" alt="" class="h-14 ">
+                <img src="@/assets/images/logo.png" alt="" class=" h-28">
             </router-link>
             <div class="w-full  flex h-12 justify-center items-center">
                 <NavLinks v-for="(item, index) in navItems" :currnetlang="currentLanguage" :key="index" :to="item.to"
@@ -18,7 +18,7 @@
         </div>
         <div class=" lg:hidden fixed z-10 flex w-full items-center justify-between bg-slate-200 ">
             <Bars3Icon class="size-10 m-2 hover:bg-black/35 rounded text-white" @click="emit('toggle-sidebar')" />
-            <img src="@/assets/images/Logo.jpg" alt="Logo" class="h-8 me-3" />
+            <img src="@/assets/images/logo.png" alt="Logo" class="h-8 me-3" />
         </div>
     </header>
 </template>
@@ -51,7 +51,7 @@ const toggleLanguage = () => {
     }).then(() => {
         window.location.reload();
     });
-    };
+};
 
 
 const emit = defineEmits(['toggle-sidebar'])

@@ -5,7 +5,7 @@
             <Navbar @toggle-sidebar="toggleSidebar" class="fixed z-10 w-full" />
 
 
-            <main>
+            <main class="pt-12 ">
                 <router-view></router-view>
             </main>
             <Footer />
@@ -21,15 +21,8 @@ import Sidebar from '@/components/ui/sidebar/sidebar.vue';
 import Footer from '@/components/footer.vue';
 import { useRoute } from 'vue-router';
 
-const sidebarOpen = ref(window.outerWidth <= 768)
-onMounted(()=>{
-    window.addEventListener('resize',()=>{
-        sidebarOpen.value == window.outerWidth >= 768
-        console.log('true val:',sidebarOpen.value);
-        console.log('reverse val:' , !sidebarOpen.value);
-        
-    })
-})
+const sidebarOpen = ref(false)
+
 const route = useRoute();
 function toggleSidebar() {
     sidebarOpen.value = !sidebarOpen.value

@@ -7,14 +7,13 @@
 
     <!-- Slide Content -->
     <div class="relative text-white p-8">
-      <img :src="logo" alt="Company logo" class="h-28 mx-auto mt-7 lg:mt-0" />
-      <p class="mt-4 text-lg md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
-        {{ slides[currentSlide].description }}
+      <img :src="logo" alt="Company logo" class=" h-60 mx-auto mt-7 lg:mt-0" />
+      <p class="mt-4 text-lg mb-7 md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
+        {{ $t('home_p')}}
       </p>
-      <button class="mt-6 px-6 py-2 bg-main text-white rounded-md shadow-lg"
-        @click="handleButtonClick(slides[currentSlide].buttonLink)">
-        {{ slides[currentSlide].buttonText }}
-      </button>
+      <router-link :to="{name:'products'}" class="mt-6 px-6 py-2 bg-black/40 text-white rounded-md shadow-lg">
+        {{ $t('our') }}
+      </router-link>
     </div>
 
     <!-- Slide navigation -->
@@ -28,7 +27,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import logo from '@/assets/images/logo.jpg'; // Import logo image for direct use
+import logo from '@/assets/images/logo.png'; // Import logo image for direct use
 import image1 from '@/assets/images/iStock-939983060.jpg'; // Import images directly
 import image2 from '@/assets/images/iStock-1293325404.jpg';
 
@@ -39,7 +38,6 @@ const slides = ref([
     description:
       'A German Saudi Arabian company leading and specializing in hygiene solutions and disinfectants. With commitment to cleanliness, safety, and innovation, we provide high-quality products designed to protect both personal and public health. Our range of advanced disinfectants and hygiene solutions are formulated to meet the highest industry standards, ensuring effective protection against harmful bacteria, viruses, and germs.',
     buttonText: 'Explore Now',
-    buttonLink: '/explore',
   },
   {
     image: image2,
@@ -47,7 +45,6 @@ const slides = ref([
     description:
       'We are a Saudi Arabian company dedicated to environmental solutions, with a mission to create a microbe-free world and elevate environmental health standards. Our vision extends across diverse application fields, aiming to tackle environmental challenges with tailored solutions. We offer an extensive range of products designed to address the unique needs of your applications, making a lasting impact for a cleaner, safer environment.',
     buttonText: 'Explore Now',
-    buttonLink: '/join',
   },
 ]);
 
