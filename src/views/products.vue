@@ -21,9 +21,9 @@
                     <p v-if="showDesc === index || !isSmallOrMediumScreen"
                         class="text-sm text-gray-600 mt-2 transition-all lg:hidden ">
                         {{ product.desc }}
-                        <p class="text-xs">
-                            {{ $t('more_info') }}
-                        </p>
+                    </p>
+                    <p class="text-xs">
+                        {{ $t('more_info') }}
                     </p>
                     <p class="hidden lg:block  md:hidden text-sm text-gray-600 mt-2 transition-all">
                         {{ product.desc }}
