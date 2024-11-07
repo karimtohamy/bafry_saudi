@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import i18n  from '@/i18n';  // Import the i18n instance directly
 import Home from '@/views/home.vue';
 import Applayout from '@/layouts/applayout.vue';
@@ -14,7 +14,7 @@ import ChStudy from '@/views/study/ChStudy.vue';
 
 // Create router
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/:lang(ar|en)', // Dynamic language in path
