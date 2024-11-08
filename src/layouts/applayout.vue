@@ -1,44 +1,52 @@
 <template>
     <div class="h-full flex min-w-full">
-        <Sidebar class="lg:hidden" :class="{ '-ms-[250px] transition-all': !sidebarOpen }" @toggle-sidebar="toggleSidebar" />
-        <div class="flex-1 ">
+        <!-- Sidebar -->
+        <Sidebar :class="{ '-ms-[250px] transition-all': !sidebarOpen }" @toggle-sidebar="toggleSidebar" />
+        <div class="flex-1">
             <Navbar @toggle-sidebar="toggleSidebar" class="fixed z-10 w-full" />
 
-
-            <main class="pt-12 ">
+            <main class="pt-12" @click="handleClickOutside()">
                 <router-view></router-view>
             </main>
-            <Footer />
+        <Footer v-if="$route.name !== 'contact'" />
         </div>
     </div>
 </template>
 
 <script setup>
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
-import Navbar from '@/components/ui/navbar/navbar.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
+import Navbar from '@/components/ui/navbar/navbar.vue';
 import Sidebar from '@/components/ui/sidebar/sidebar.vue';
 import Footer from '@/components/footer.vue';
 import { useRoute } from 'vue-router';
 
-const sidebarOpen = ref(false)
+const sidebarOpen = ref(false);
+const sidebar = ref(null); // Create a reference for the sidebar
 
-const route = useRoute();
+
+// Toggle the sidebar state (open/close)
 function toggleSidebar() {
-    sidebarOpen.value = !sidebarOpen.value
+    sidebarOpen.value = !sidebarOpen.value;
 }
-// Define a reactive variable for tracking scroll state
+
+// Handle clicks outside the sidebar to close it
+const handleClickOutside = (event) => {
+    if (sidebar.value && sidebarOpen) {
+        sidebarOpen.value = false; // Close the sidebar if the click is outside
+    }
+};
+
+// Add event listener when mounted
 
 </script>
 
-
 <style scoped>
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #397524 #EBEBEB;
+    scrollbar-width: thin;
+    scrollbar-color: #397524 #ebebeb;
 }
 
-/* Chrome, Edge and Safari */
+/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     height: 9px;
     width: 9px;
@@ -46,15 +54,7 @@ function toggleSidebar() {
 
 *::-webkit-scrollbar-track {
     border-radius: 0px;
-    background-color: #EBEBEB;
-}
-
-*::-webkit-scrollbar-track:hover {
-    background-color: #FF0000;
-}
-
-*::-webkit-scrollbar-track:active {
-    background-color: #C2C2C2;
+    background-color: #ebebeb;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -63,10 +63,10 @@ function toggleSidebar() {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #62A34B;
+    background-color: #62a34b;
 }
 
 *::-webkit-scrollbar-thumb:active {
-    background-color: #62A34B;
+    background-color: #62a34b;
 }
 </style>
