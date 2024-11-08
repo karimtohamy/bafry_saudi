@@ -1,6 +1,6 @@
 {
   "name": "bafry_saudi",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.1.5",
     "leaflet": "^1.9.4",
