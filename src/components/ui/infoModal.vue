@@ -18,7 +18,7 @@
                                 {{ title }}
                             </DialogTitle>
                             <div class="mt-2">
-                                <img :src="`/src/assets/${image}`" alt="">
+                                <img :src="`./src/assets/${image}`" alt="">
                             </div>
 
                             <div class="mt-4">
