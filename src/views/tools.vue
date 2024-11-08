@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen flex items-center justify-center px-10 pt-12">
+    <div class="h-full my-10 flex items-center justify-center px-10 ">
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 w-full gap-8">
             <div v-for="tool in tools"
                 class="shadow-lg rounded flex flex-col items-center justify-center p-5 bg-slate-200 hover:scale-110 transition-all">
