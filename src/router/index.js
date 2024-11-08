@@ -14,7 +14,7 @@ import ChStudy from '@/views/study/ChStudy.vue';
 
 // Create router
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/:lang(ar|en)', // Dynamic language in path
@@ -24,11 +24,13 @@ const router = createRouter({
           path: 'home',
           name: 'home',
           component: Home,
+          
         },
         {
           path: 'products',
           name: 'products',
           component: Products,
+          title:'products'
         },
         {
           path: 'studies',
@@ -88,7 +90,8 @@ const router = createRouter({
 // Global navigation guard
 router.beforeEach((to, from, next) => {
   const lang = to.params.lang || 'en';  // Use the lang from the URL
-  i18n.global.locale = lang;  // Update i18n locale here
+  i18n.global.locale = lang; 
+  document.title = i18n.global.t(to.name)
   next();
 });
 
