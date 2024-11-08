@@ -3,13 +3,13 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted,ref } from 'vue';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
+ const zoom = ref(window.outerWidth <=768 ? 10 : 13)
 onMounted(() => {
     // Initialize the map
-    const map = L.map('map').setView([24.683642, 46.6909083], 10); 
+    const map = L.map('map').setView([24.683642, 46.6909083], zoom.value); 
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -18,7 +18,7 @@ onMounted(() => {
 
     // Add a static marker
     const marker = L.marker([24.683642, 46.6909083]).addTo(map)
-        .bindPopup('')
+        .bindPopup('Olaya St، برج التاريم،, Riyadh Saudi Arabia')
         .openPopup();
 });
 </script>
@@ -26,7 +26,8 @@ onMounted(() => {
 <style>
 /* Add custom height to your map container */
 #map {
-    height: 20rem;
-    
+aspect-ratio: 1/1;
+z-index: 1;
 }
+
 </style>

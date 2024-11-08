@@ -1,6 +1,6 @@
 <template>
-    <div class="h-screen">
-        <div class=" w-full h-[100vh]">
+    <div >
+        <div class=" w-full h-[90vh]">
             <div class=" h-1/2  w-full flex items-center relative overflow-hidden ">
                 <img :src="mountainImage" alt=""
                     class="w-full img1 overflow-hidden h-auto object-cover  object-bottom " />

@@ -14,7 +14,7 @@ import ChStudy from '@/views/study/ChStudy.vue';
 
 // Create router
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/:lang(ar|en)', // Dynamic language in path

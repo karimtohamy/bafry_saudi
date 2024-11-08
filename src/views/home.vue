@@ -1,7 +1,7 @@
 <template>
     <div>
         <ImageSlider />
-        <Mission/>
+        <!-- <Mission/> -->
     </div>
 </template>
 
