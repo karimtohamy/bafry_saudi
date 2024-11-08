@@ -1,5 +1,4 @@
 <template>
-    
     <TransitionRoot appear :show="show" as="template">
         <Dialog as="div" @close="closeModal" class="relative z-10">
             <TransitionChild as="template" enter="duration-300 ease-out" enter-from="opacity-0" enter-to="opacity-100"
@@ -17,10 +16,9 @@
                             <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
                                 {{ title }}
                             </DialogTitle>
-                            <div class="mt-2">
-                                <img :src="`@/assets/${image}`" alt="">
-                            </div>
 
+                            <div class="mt-2 w-full bg-cover h-80 bg-no-repeat" :style="`background-image: url(src/assets/products/${image})`">
+                            </div>
                             <div class="mt-4">
                                 <button type="button"
                                     class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
@@ -37,7 +35,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import {
     TransitionRoot,
     TransitionChild,
@@ -45,20 +43,21 @@ import {
     DialogPanel,
     DialogTitle,
 } from '@headlessui/vue'
-const props = defineProps({
-    title:String,
-    modelValue:Boolean,
-    image:String 
 
+const props = defineProps({
+    title: String,
+    modelValue: Boolean,
+    image: String // Pass image as prop
 })
+
 const emit = defineEmits(['update:modelValue'])
 
 const show = computed({
-    get : ()=>props.modelValue,
-    set : (value)=>emit('update:modelValue',value)
+    get: () => props.modelValue,
+    set: (value) => emit('update:modelValue', value)
 })
+
 function closeModal() {
     show.value = false
 }
-
 </script>
