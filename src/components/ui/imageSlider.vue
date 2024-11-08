@@ -1,14 +1,15 @@
 <template>
   <div
-    class="relative flex items-center justify-center h-screen text-center bg-cover bg-center transition-all duration-1000"
+    class="relative flex items-center justify-center h-[96vh] text-center bg-cover bg-center transition-all duration-1000"
     :style="`background-image: url(${slides[currentSlide].image})`">
     <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-black opacity-50"> </div>
 
     <!-- Slide Content -->
-    <div class="relative text-white p-8">
-      <img :src="logo" alt="Company logo" class=" h-60 mx-auto mt-7 lg:mt-0" />
-      <p class="mt-4 text-lg mb-7 md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
+    <div class="relative text-white">
+      <img :src="logo" alt="Company logo"
+        class="h-60 mx-auto absolute -top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+      <p class=" text-lg mb-7 md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
         {{ $t('home_p')}}
       </p>
       <router-link :to="{name:'products'}" class="mt-6 px-6 py-2 bg-black/40 text-white rounded-md shadow-lg">
