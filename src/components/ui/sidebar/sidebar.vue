@@ -1,31 +1,68 @@
 <template>
     <div
-        class="fixed min-w-[250px] transition-all z-10 flex justify-start px-3 bg-emerald-600 h-screen top-0 lg:relative lg:h-auto">
-        <div class="lg:pt-14 flex flex-col w-full mt-14">
-            
-            <SidebarLinks v-for="item in navItems" @click="handleClick" :text="item.text" :to="item.to"  />
+        class=" transistion-all fixed min-w-[250px] transition-all z-10 flex justify-start px-3 bg-emerald-600 h-screen top-0 lg:relative lg:h-auto">
+        <div class="lg:pt-14 flex flex-col w-full mt-14 justify-between">
+            <div>
 
+                <SidebarLinks v-for="item in navItems" @click="emit('toggle-sidebar')" 
+                    :to="item.to" />
+            </div>
+            <div class=" mb-20 flex justify-center w-full ">
+                <button @click="toggleLanguage" class="mx-auto underline">
+                    {{ currentLanguage === 'en' ? 'العربية' : 'English' }}
+                </button>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
 import SidebarLinks from './sidebarLinks.vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useRouter, useRoute } from 'vue-router';
+
+const router = useRouter();
+const route = useRoute();
+const { locale } = useI18n();
+const currentLanguage = ref(locale.value);
+
+
+const setLanguagePreference = (lang) => {
+    localStorage.setItem('preferredLanguage', lang); // Save preferred language
+    locale.value = lang;
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr'); // Adjust text direction
+};
+
+const toggleLanguage = () => {
+    const newLang = currentLanguage.value === 'en' ? 'ar' : 'en';
+    setLanguagePreference(newLang);
+    currentLanguage.value = newLang;
+    router.push({
+        path: `/${newLang}${route.fullPath.substring(3)}` // Update the lang in the current path
+    }).then(() => {
+        window.location.reload();
+    });
+};
+
+
+
+
+onMounted(() => {
+    const savedLanguage = localStorage.getItem('preferredLanguage') || 'en'; // Get from storage or default
+    setLanguagePreference(savedLanguage);
+    currentLanguage.value = savedLanguage;
+});
 const navItems = [
-    { to: "home", text: "Home" },
-    { to: "products", text: "Products" },
-    { to: "studies", text: "Studies" },
-    { to: "faq", text: "FAQ" },
-    { to: "contact", text: "Contact Us" },
-    { to: "tools", text: "Tools" },
+    { to: "home"},
+    { to: "products"},
+    { to: "studies"},
+    { to: "contact"},
+    { to: "tools"},
+    { to: "faq"},
 ];
 
 const emit = defineEmits(['toggle-sidebar']);
-function handleClick() {
-    if (window.outerWidth <= 786) {
-        emit('toggle-sidebar')
-    }
-}
 
 </script>
 <style scoped>

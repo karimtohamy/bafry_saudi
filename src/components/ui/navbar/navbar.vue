@@ -18,7 +18,10 @@
         </div>
         <div class=" lg:hidden fixed z-10 flex w-full items-center justify-between bg-slate-200 ">
             <Bars3Icon class="size-10 m-2 hover:bg-black/35 rounded text-white" @click="emit('toggle-sidebar')" />
-            <img src="@/assets/images/logo.png" alt="Logo" class="h-8 me-3" />
+            <router-link :to="{name:'home'}" >
+
+                <img src="@/assets/images/logo.png" alt="Logo" class=" h-14 me-3" />
+            </router-link>
         </div>
     </header>
 </template>
