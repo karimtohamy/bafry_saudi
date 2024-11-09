@@ -7,11 +7,6 @@
                 <SidebarLinks v-for="item in navItems" @click="emit('toggle-sidebar')" 
                     :to="item.to" />
             </div>
-            <div class=" mb-20 flex justify-center w-full ">
-                <button @click="toggleLanguage" class="mx-auto underline">
-                    {{ currentLanguage === 'en' ? 'العربية' : 'English' }}
-                </button>
-            </div>
         </div>
     </div>
 </template>

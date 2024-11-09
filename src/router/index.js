@@ -11,6 +11,7 @@ import Studies from '@/views/study/studies.vue';
 import FishStudy from '@/views/study/fishStudy.vue';
 import AcidStudy from '@/views/study/acidStudy.vue';
 import ChStudy from '@/views/study/ChStudy.vue';
+import NotFound from '@/views/404.vue'
 
 // Create router
 const router = createRouter({
@@ -84,6 +85,11 @@ const router = createRouter({
         return { name: 'home', params: { lang } }; // Redirect with the correct language
       },
     },
+    {
+      path: '/:lang(ar|en)/:catchAll(.*)*',
+      name: 'NotFound',
+      component:NotFound ,
+    },
   ],
 });
 
@@ -91,7 +97,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const lang = to.params.lang || 'en';  // Use the lang from the URL
   i18n.global.locale = lang; 
-  document.title = i18n.global.t(to.name)
+  document.title = i18n.global.t(to.name) || '404'; 
   next();
 });
 
