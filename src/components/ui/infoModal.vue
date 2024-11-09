@@ -17,13 +17,12 @@
                                 {{ title }}
                             </DialogTitle>
 
-                            <div class="mt-2 w-full bg-cover h-80 bg-no-repeat" :style="`background-image: url(src/assets/products/${image})`">
-                            </div>
+                                <img :src="imageUrl" alt="">
                             <div class="mt-4">
                                 <button type="button"
                                     class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                                     @click="closeModal">
-                                    {{ $t('close') }}
+                                    {{ $t("close") }}
                                 </button>
                             </div>
                         </DialogPanel>
@@ -35,29 +34,60 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
-import {
-    TransitionRoot,
-    TransitionChild,
-    Dialog,
-    DialogPanel,
-    DialogTitle,
-} from '@headlessui/vue'
+import { ref, computed, watchEffect } from 'vue';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue';
 
 const props = defineProps({
     title: String,
     modelValue: Boolean,
-    image: String // Pass image as prop
-})
+    image: String // Image basename with extension (e.g., 'product1.jpg')
+});
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 
 const show = computed({
     get: () => props.modelValue,
     set: (value) => emit('update:modelValue', value)
-})
+});
+const imageUrl = ref('')
+const imageMap = {
+    "dhs": () => import('@/assets/products/dhs.png'),
+    "dqa": () => import('@/assets/products/dqa.png'),
+    "AntiK": () => import('@/assets/products/AntiK.png'),
+    "dcloud": () => import('@/assets/products/dcloud.png'),
+    "dplus": () => import('@/assets/products/dplus.png'),
+    "pdo": () => import('@/assets/products/pdo.png'),
+    "pdl": () => import('@/assets/products/pdl.png'),
+    "pdn": () => import('@/assets/products/pdn.png'),
+    "pdp": () => import('@/assets/products/pdp.png'),
+    "ssr": () => import('@/assets/products/ssr.png'),
+    "smc": () => import('@/assets/products/smc.png'),
+    "hand_saop": () => import('@/assets/products/hand_soap.png'),
+    "AB_soap": () => import('@/assets/products/AB_soap.png'),
+    "hand_gel": () => import('@/assets/products/hand_gel.png'),
+    "hand_li": () => import('@/assets/products/hand_li.png'),
+    "dt11": () => import('@/assets/products/dt11.png'),
+    "dtc": () => import('@/assets/products/dtc.png'),
+    "dtn": () => import('@/assets/products/dtn.png'),
+    "n_foam": () => import('@/assets/products/n_foam.png'),
+    "ac_foam": () => import('@/assets/products/ac_foam.png'),
+    "ak_foam": () => import('@/assets/products/ak_foam.png')
+};
+watchEffect(() => {
+    if (props.image && imageMap[props.image]) {
+        imageMap[props.image]()
+            .then((mod) => {
+                imageUrl.value = mod.default; // URL of the dynamically imported image
+            })
+            .catch((error) => {
+                console.error(`Error loading image for ${props.image}:`, error);
+            });
+    } else {
+        imageUrl.value = null; // Reset if imageName does not match
+    }
+});
 
 function closeModal() {
-    show.value = false
+    show.value = false;
 }
 </script>
