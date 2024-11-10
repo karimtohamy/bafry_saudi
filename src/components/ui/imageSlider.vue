@@ -2,9 +2,7 @@
   <div
     class="relative flex items-center justify-center h-[96vh] text-center bg-cover bg-center transition-all duration-1000"
     :style="`background-image: url(${slides[currentSlide].image})`">
-    <!-- Dark overlay for readability -->
     <div class="absolute inset-0 bg-black opacity-50"> </div>
-
     <!-- Slide Content -->
     <div class="relative text-white">
       <img :src="logo" alt="Company logo"
@@ -34,14 +32,14 @@ import image2 from '@/assets/images/iStock-1293325404.jpg';
 
 const slides = ref([
   {
-    image: image1,
+    image: image2,
     title: 'Welcome to Our Platform',
     description:
       'A German Saudi Arabian company leading and specializing in hygiene solutions and disinfectants. With commitment to cleanliness, safety, and innovation, we provide high-quality products designed to protect both personal and public health. Our range of advanced disinfectants and hygiene solutions are formulated to meet the highest industry standards, ensuring effective protection against harmful bacteria, viruses, and germs.',
     buttonText: 'Explore Now',
   },
   {
-    image: image2,
+    image: image1,
     title: 'Stay Connected',
     description:
       'We are a Saudi Arabian company dedicated to environmental solutions, with a mission to create a microbe-free world and elevate environmental health standards. Our vision extends across diverse application fields, aiming to tackle environmental challenges with tailored solutions. We offer an extensive range of products designed to address the unique needs of your applications, making a lasting impact for a cleaner, safer environment.',
