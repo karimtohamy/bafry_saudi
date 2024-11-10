@@ -1,6 +1,6 @@
 <template>
     <div
-        class=" transistion-all fixed min-w-[250px] transition-all z-10 flex justify-start px-3 bg-emerald-600 h-screen top-0 lg:relative lg:h-auto">
+        class=" transistion-all fixed min-w-[240px] transition-all z-10 flex justify-start px-3 bg-primary h-screen top-0 lg:relative lg:h-auto">
         <div class="lg:pt-14 flex flex-col w-full mt-14 justify-between">
             <div>
 

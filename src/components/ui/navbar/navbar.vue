@@ -1,6 +1,6 @@
 <template>
-    <header class="max-x-screen">
-        <div class="bg-slate-200 hidden invisible lg:visible lg:flex w-full items-center justify-center top-0 py-2">
+    <header class="max-w-screen shadow-lg text-white">
+        <div class="bg-primary hidden invisible lg:visible lg:flex w-full items-center justify-center top-0 py-2">
             <router-link class="absolute" :class="[currentLanguage == 'ar' ? 'right-6' : 'left-6']"
                 :to="{ name: 'home', params: { lang: currentLanguage } }">
 
@@ -11,12 +11,12 @@
                     :text="item.text" />
             </div>
             <div class="absolute" :class="[currentLanguage == 'ar' ? 'left-6' : 'right-6']">
-                <button @click="toggleLanguage" class="py-2 px-4 me-3 text-black rounded-md bg-black/30">
+                <button @click="toggleLanguage" class="py-2 px-4 me-3 text-white rounded-md bg-white/30">
                     {{ currentLanguage === 'en' ? 'العربية' : 'English' }}
                 </button>
             </div>
         </div>
-        <div class=" lg:hidden fixed z-10 flex w-full items-center justify-between bg-slate-200 ">
+        <div class=" lg:hidden fixed z-10 flex w-full items-center justify-between bg-primary ">
             <Bars3Icon class="size-10 m-2 hover:bg-black/35 rounded text-white" @click="emit('toggle-sidebar')" />
             <div class="flex items-center ">
                 <a @click="toggleLanguage" class="me-3 text-s underline rounded-md">

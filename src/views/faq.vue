@@ -1,11 +1,11 @@
 <template>
    <div class="max-w-4xl lg:mx-auto md:mx-auto mx-3 py-8">
-      <h1 class="text-3xl font-bold text-center mb-8">FAQs</h1>
-      <div v-for="(faq, index) in faqs" :key="index" class="mb-6">
+      <h1 class="text-3xl font-bold text-center mb-8">{{ $t('faq') }}</h1>
+      <div v-for="(faq, index) in faqs" :key="index" class="mb-6 text-white">
          <div
-            class="flex justify-between items-center bg-gray-100 p-5 rounded-lg shadow-md cursor-pointer hover:bg-gray-200 transition"
+            class="flex justify-between items-center bg-sec text-white p-5 rounded-lg shadow-md cursor-pointer hover:bg-sec/50 transition"
             @click="toggleFAQ(index)">
-            <h2 class="text-lg font-semibold text-gray-800">{{ faq.question }}</h2>
+            <h2 class="text-lg font-semibold ">{{ faq.question }}</h2>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform duration-200"
                :class="activeIndex === index ? 'transform rotate-180' : 'transform rotate-0'" fill="none"
                viewBox="0 0 24 24" stroke="currentColor">

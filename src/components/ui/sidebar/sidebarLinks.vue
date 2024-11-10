@@ -5,7 +5,7 @@
             lang: currnetlang
             }
         }" class="flex justify-start ps-3 items-center mb-2 py-2 rounded transition-colors text-white"
-            active-class="bg-black/20 !text-gray-800">
+            active-class="bg-black/30 !text-white">
 
             <span>{{ $t(to)}}</span>
         </router-link>

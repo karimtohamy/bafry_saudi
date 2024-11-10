@@ -1,14 +1,14 @@
 <template>
     <div class="h-full flex min-w-full">
         <!-- Sidebar -->
-        <Sidebar :class="{ '-ms-[250px] transition-all': !sidebarOpen }" @toggle-sidebar="toggleSidebar" />
+        <Sidebar :class="{ '-ms-[240px] transition-all': !sidebarOpen }" @toggle-sidebar="toggleSidebar" />
         <div class="flex-1">
-            <Navbar @toggle-sidebar="toggleSidebar" class="fixed z-10 w-full" />
+            <Navbar @toggle-sidebar="toggleSidebar" class="fixed z-10 w-full " />
 
-            <main class="pt-12" @click="handleClickOutside()">
+            <main class="pt-12 bg-main" @click="handleClickOutside()">
                 <router-view></router-view>
             </main>
-        <Footer v-if="$route.name !== 'contact'" />
+            <!-- <Footer v-if="$route.name !== 'contact'" /> -->
         </div>
     </div>
 </template>

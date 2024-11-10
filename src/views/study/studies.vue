@@ -3,7 +3,7 @@
         :style="{ backgroundImage: `url(${backgroundImage})` }">
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 w-full gap-8">
             <RouterLink v-for="study in studies" :key="study.to" :to="{ name: study.to }"
-                class="shadow-lg rounded flex items-center justify-center p-5 bg-slate-200 hover:scale-110 transition-all">
+                class="shadow-lg rounded flex items-center justify-center p-5 bg-sec text-white hover:scale-110 transition-all">
                 {{ study.name }}
             </RouterLink>
         </div>

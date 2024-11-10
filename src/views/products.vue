@@ -5,25 +5,25 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen">
                 <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`"
-                    class="border shadow rounded-lg p-4 flex flex-col items-center justify-center text-center bg-white relative">
+                    class="border shadow rounded-lg p-4 flex flex-col items-center justify-center text-center bg-sec text-white relative">
 
                     <span class="font-medium">{{ product.name }}</span>
 
                     <!-- Toggle Description and Open Modal on 'More Info' Click -->
                     <button @click="toggleDesc(`${item.category}-${index}`)"
-                        class="text-blue-500 text-xs lg:hidden mt-2">
+                        class="text-emerald-300 text-xs lg:hidden mt-2">
                         {{ showDesc === `${item.category}-${index}` ? $t('hide') : $t('more_info') }}
                     </button>
 
                     <!-- Description and 'More Info' Link -->
                     <span v-if="showDesc === `${item.category}-${index}` || !isSmallOrMediumScreen"
-                        class="text-sm text-gray-600 mt-2 transition-all lg:hidden">
+                        class="text-sm text-white mt-2 transition-all lg:hidden">
                         {{ product.desc }}
                         <p class="text-xs cursor-pointer" @click="openModal(product)">
                             {{ $t('more_info') }}
                         </p>
                     </span>
-                    <p class="hidden lg:block md:hidden text-sm text-gray-600 mt-2 transition-all">
+                    <p class="hidden lg:block md:hidden text-sm text-white mt-2 transition-all">
                         {{ product.desc }}
                     </p>
                     <div class="w-full flex justify-start invisible md:invisible lg:visible">
