@@ -1,18 +1,23 @@
 <template>
-    <div class="h-full my-10 flex items-center justify-center px-10 ">
+    <div class="h-full py-10 flex items-center justify-center px-10 ">
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 w-full gap-8">
-            <div v-for="tool in tools"
+            <div v-for="tool in tools" :key="tool.id"
                 class="shadow-lg rounded flex flex-col items-center justify-center p-5 bg-sec text-white hover:scale-110 transition-all">
                 <img :src="tool.imgSrc" alt="">
-                {{ tool.name }}
-                {{ tool.details }}
+                <p>{{ tool.name }}</p>
+                <p>{{ tool.details }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-const tools = [
+import { ref, computed, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+
+const tools_en = [
     {
         id: "Dispensers",
         imgSrc: "https://bafry.de/img/dispenser.jpg",
@@ -51,9 +56,54 @@ const tools = [
     }
 ];
 
+const tools_ar = [
+    {
+        id: "Dispensers",
+        imgSrc: "https://bafry.de/img/dispenser.jpg",
+        name: "موزعات",
+        details: "موزع الصابون هو جهاز يقوم بصرف الصابون عند تفعيله بشكل مناسب. يمكن تشغيله يدويًا بواسطة مقبض أو تلقائيًا."
+    },
+    {
+        id: "Foaming",
+        imgSrc: "https://bafry.de/img/foam.jpg",
+        name: "آلات الرغوة",
+        details: "مصنوعة من الفولاذ المقاوم للصدأ من الداخل والخارج ومصنعة من قبل Kasselmann، ألمانيا."
+    },
+    {
+        id: "Fogging",
+        imgSrc: "https://bafry.de/img/fogging.png",
+        name: "آلات الضباب",
+        details: "يمكن لهذه المنتجات تطبيق مجموعة واسعة من المواد الكيميائية. الجهد القياسي - 110 فولت. متوفر بجهود كهربائية أخرى وبقوابس بنمط أوروبي عند الطلب. معتمد CE."
+    },
+    {
+        id: "strips50",
+        imgSrc: "https://bafry.de/img/acid.png",
+        name: "اختبار HP",
+        details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق لحمض البيرأسيتيك في المحاليل. يوفر الإجراء البسيط غمس وقراءة نتائج آمنة في غضون 30 ثانية."
+    },
+    {
+        id: "strips100",
+        imgSrc: "https://bafry.de/img/peroxid.png",
+        name: "اختبار بيفري",
+        details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق لحمض البيرأسيتيك في المحاليل. يوفر الإجراء البسيط غمس وقراءة نتائج آمنة في غضون 30 ثانية."
+    },
+    {
+        id: "quat",
+        imgSrc: "https://bafry.de/img/quat.png",
+        name: "اختبار الكوات",
+        details: "هذه الأشرطة مخصصة للتحديد السريع والموثوق لمركبات الأمونيوم الرباعية (QUAT) في المحاليل. يوفر الإجراء البسيط غمس وقراءة نتيجة موثوقة خلال 15 ثانية."
+    }
+];
+
+const currentLanguage = ref(locale.value);
+
+watch(locale, (newLocale) => {
+    currentLanguage.value = newLocale;
+});
+
+const tools = computed(() => currentLanguage.value === 'ar' ? tools_ar : tools_en);
 </script>
 
-<style lang="scss" scoped>
-
-
+<style scoped>
+/* Add your styles here */
 </style>
