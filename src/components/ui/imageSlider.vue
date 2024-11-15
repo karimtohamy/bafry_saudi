@@ -2,15 +2,15 @@
   <div
     class="relative flex items-center justify-center h-[96vh] text-center bg-cover bg-center transition-all duration-1000"
     :style="`background-image: url(${slides[currentSlide].image})`">
-    <div class="absolute inset-0 bg-black opacity-50"> </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
     <!-- Slide Content -->
     <div class="relative text-white">
       <img :src="logo" alt="Company logo"
         class="h-60 mx-auto absolute -top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-      <p class=" text-lg mb-7 md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
-        {{ $t('home_p')}}
+      <p class="text-lg mb-7 md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
+        {{ $t('home_p') }}
       </p>
-      <router-link :to="{name:'products'}" class="mt-6 px-6 py-2 bg-black/40 text-white rounded-md shadow-lg">
+      <router-link :to="{ name: 'products' }" class="mt-6 px-6 py-2 bg-black/40 text-white rounded-md shadow-lg">
         {{ $t('our') }}
       </router-link>
     </div>
@@ -50,14 +50,23 @@ const slides = ref([
 const currentSlide = ref(0);
 let sliderInterval;
 
+// Function to preload the next image
+const preloadNextImage = () => {
+  const nextSlideIndex = (currentSlide.value + 1) % slides.value.length;
+  const img = new Image();
+  img.src = slides.value[nextSlideIndex].image;
+};
+
 // Function to change slides
 const nextSlide = () => {
   currentSlide.value = (currentSlide.value + 1) % slides.value.length;
+  preloadNextImage(); // Preload the next slide's image
 };
 
 // Start the slider when component is mounted
 onMounted(() => {
   sliderInterval = setInterval(nextSlide, 5000); // Change every 5 seconds
+  preloadNextImage(); // Preload the first "next" image when mounted
 });
 
 // Clear the interval when component is unmounted
@@ -65,16 +74,12 @@ onUnmounted(() => {
   clearInterval(sliderInterval);
 });
 
-// Button click handler
-const handleButtonClick = (link) => {
-  console.log(`Navigating to: ${link}`);
-};
-
 // Manual navigation function
 const goToSlide = (index) => {
   currentSlide.value = index;
   clearInterval(sliderInterval);
   sliderInterval = setInterval(nextSlide, 5000);
+  preloadNextImage(); // Preload the next slide after manual navigation
 };
 </script>
 
