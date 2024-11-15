@@ -8,6 +8,7 @@
 
             <!-- Contact Form component -->
             <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-6">
+                <div class="mb-7 text-white text-xl">{{ $t('contact_email') }}</div>
                 <ContactForm />
             </div>
         </div>
