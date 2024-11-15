@@ -1,10 +1,11 @@
 <template>
-    <div class="flex justify-center items-center w-full h-[90vh] pt-32 lg:pb-5 lg:pt-12 mb:py-12 px-4">
-        <!-- Main container with responsive padding and flex layout -->
+    <div class="flex justify-center items-center w-full h-full py-10 lg:pt-8 px-4">
         <div
-            class="rounded-lg shadow-lg  flex flex-col lg:flex-row lg:mx-10 w-full p-6 sm:p-10 md:p-12 lg:p-20 justify-between items-center lg:items-start bg-primary overflow-hidden">
-            <!-- Map component with responsive sizing and position adjustments -->
-            <Map class=" w-64 h-64 lg:h-96 lg:w-96 order-2 lg:order-1 rounded-lg overflow-hidden" />
+            class="rounded-lg shadow-lg  flex flex-col lg:flex-row lg:mx-10 w-full p-6 sm:p-10 md:p-12 lg:p-20 justify-between items-center  bg-primary overflow-hidden">
+            <div class="min-h-full flex items-center order-2 lg:order-1  w-auto lg:w-auto md:w-full">
+
+                <Map class=" w-64 h-64 lg:h-full lg:w-96  md:w-full md:aspect-video rounded-lg overflow-hidden aspect-auto flex items-center" />
+            </div>
 
             <!-- Contact Form component -->
             <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-6">

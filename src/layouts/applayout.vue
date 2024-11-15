@@ -5,7 +5,7 @@
         <div class="flex-1">
             <Navbar @toggle-sidebar="toggleSidebar" class="fixed z-10 w-full " />
 
-            <main class="pt-12 bg-main" @click="handleClickOutside()">
+            <main class="pt-12 bg-main h-auto" @click="handleClickOutside()">
                 <router-view></router-view>
             </main>
             <Footer v-if="$route.name !== 'contact'" />
