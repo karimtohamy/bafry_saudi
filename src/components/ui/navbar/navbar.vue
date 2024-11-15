@@ -74,10 +74,10 @@ onMounted(() => {
 const navItems = [
     { to: "home", text: "Home" },
     { to: "products", text: "Products" },
-    { to: "studies", text: "Studies" },
-    { to: "faq", text: "FAQ" },
-    { to: "contact", text: "Contact Us" },
     { to: "tools", text: "Tools" },
+    { to: "studies", text: "Studies" },
+    { to: "contact", text: "Contact Us" },
+    { to: "faq", text: "FAQ" },
 ];
 
 </script>
