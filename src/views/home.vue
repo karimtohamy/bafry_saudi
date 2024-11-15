@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <ImageSlider />
-        <!-- <Mission/> -->
+    <div >
+        <ImageSlider class=" shadow-2xl" />
+        <Mission/>
     </div>
 </template>
 
