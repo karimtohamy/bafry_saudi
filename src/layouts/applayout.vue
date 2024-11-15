@@ -8,7 +8,7 @@
             <main class="pt-12 bg-main" @click="handleClickOutside()">
                 <router-view></router-view>
             </main>
-            <!-- <Footer v-if="$route.name !== 'contact'" /> -->
+            <Footer v-if="$route.name !== 'contact'" />
         </div>
     </div>
 </template>
