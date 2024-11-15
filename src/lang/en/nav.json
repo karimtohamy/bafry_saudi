@@ -7,5 +7,10 @@
   "tools": "Tools",
   "more_info": "more info",
   "hide":"Hide Info",
-  "close":"Close"
+  "close":"Close",
+  "contact_email":"Send us an Email",
+  "name_email":"Name",
+  "comment":"Leave a comment",
+  "email_add":"Email Address",
+  "message":"Message"
 }
