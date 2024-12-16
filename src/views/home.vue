@@ -1,6 +1,6 @@
 <template>
-    <div >
-        <ImageSlider class=" shadow-2xl" />
+    <ImageSlider class=" shadow-2xl" />
+    <div class="flex justify-center">
         <Mission/>
     </div>
 </template>

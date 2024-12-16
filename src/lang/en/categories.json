@@ -4,27 +4,27 @@
     "products": [
       {
         "name": "D-H/S Ions",
-        "desc": "D-H/S IONS. The Latest Exclusive Multipurpose Disinfectant, hydrogen peroxide (50 %) & silver ions. D-H/S IONS. long acting broad spectrum against spores, fungi’s, bacteria, viruses, algae, bio film. D-H/S IONS. food grade, nontoxic, non-carcinogenic, non-mutagenic.",
+        "desc": "The Latest Exclusive Multipurpose Disinfectant, hydrogen peroxide (50%) & silver ions. Long acting broad spectrum against spores, fungi, bacteria, viruses, algae, bio film. Food grade, nontoxic, non-carcinogenic, non-mutagenic.",
         "image": "dhs"
       },
       {
         "name": "D-Q/A Cloud",
-        "desc": "D-Q/A CLOUD. New innovation nanotechnology disinfectant, Quaternary ammonium compound & Branched alcohol. D-Q/A CLOUD. strong against spores, fungi’s, bacteria, viruses, algae. D-Q/A CLOUD. food grade, nontoxic",
+        "desc": "New innovation nanotechnology disinfectant, Quaternary ammonium compound & Branched alcohol. Strong against spores, fungi, bacteria, viruses, algae. Food grade, nontoxic",
         "image": "dqa"
       },
       {
         "name": "Anti Keime",
-        "desc": "ANTIKEIME. New generation multipurpose disinfectant, ready to use, hydrogen peroxide & silver ions. ANTIKEIME. long acting broad spectrum against spores, fungi’s, bacteria, viruses, algae, bio film. ANTIKEIME. food grade, nontoxic, non-carcinogenic, non-mutagenic.",
+        "desc": "New generation multipurpose disinfectant, ready to use, hydrogen peroxide & silver ions. Long acting broad spectrum against spores, fungi, bacteria, viruses, algae, bio film. Food grade, nontoxic, non-carcinogenic, non-mutagenic.",
         "image": "AntiK"
       },
       {
         "name":"D-Cloud",
-        "desc":"D-CLOUD. New innovation nanotechnology disinfectant, Quaternary ammonium compound & Branched alcohol. D-CLOUD. strong against spores, fungi’s, bacteria, viruses, algae. D-CLOUD. food grade, nontoxic",
+        "desc":"New innovation nanotechnology disinfectant, Quaternary ammonium compound & Branched alcohol. Strong against spores, fungi, bacteria, viruses, algae. Food grade, nontoxic",
         "image":"dcloud"
       },
       {
         "name":"D-PLUS",
-        "desc":"D-PLUS. a several substances oligodynamic disinfectants. A synergetic effect of hydrogen peroxide, silver ions & acetic acid. D-PLUS. long acting broad spectrum against spores, fungi’s, bacteria, viruses, algae, bio film. D-PLUS. food grade, nontoxic, non-carcinogenic, nonmutagenic. ",
+        "desc":"A several substances oligodynamic disinfectants. A synergetic effect of hydrogen peroxide, silver ions & acetic acid. Long acting broad spectrum against spores, fungi, bacteria, viruses, algae, bio film .Food grade, nontoxic, non-carcinogenic, nonmutagenic. ",
         "image":"dplus"
       }
     ]
@@ -34,22 +34,22 @@
     "products": [
       {
         "name": "PD-O",
-        "desc": "PD-O. a Strong Pre-Disinfectant acidic cleaner, medium foaming Effective in the lowest concentration on salts, scales, grease, fats and proteins. PD-O. free from dangerous and harmful substances for health & production lines.",
+        "desc": "A strong Pre-Disinfectant acidic cleaner, medium foaming Effective in the lowest concentration on salts, scales, grease, fats and proteins. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdo"
       },
       {
         "name": "P-D/L",
-        "desc": "PD-L. a Strong Pre-Disinfectant Alkaline cleaner, low foaming Effective in the lowest concentration on grease, fats, proteins and scales. PD-L. free from dangerous and harmful substances for health & production lines.",
+        "desc": "A strong Pre-Disinfectant Alkaline cleaner, low foaming Effective in the lowest concentration on grease, fats, proteins and scales. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdl"
       },
       {
         "name": "P-D/N",
-        "desc": "PD-N. a Strong Pre-Disinfectant neutral cleaner, highly foaming, Effective in the lowest concentration on grease, fats, proteins and scales. PD-N. free from dangerous and harmful substances for health & production lines.",
+        "desc": "A strong Pre-Disinfectant neutral cleaner, highly foaming, Effective in the lowest concentration on grease, fats, proteins and scales. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdn"
       },
       {
         "name": "P-D/Powder",
-        "desc": "PD-powder. a Strong Alkaline pre disinfectant powder with acidic media. Effective in the lowest concentration on salts, scales, grease, fats and proteins. PD-L. free from dangerous and harmful substances for health & production lines.",
+        "desc": "A strong Alkaline pre disinfectant powder with acidic media. Effective in the lowest concentration on salts, scales, grease, fats and proteins. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdp"
       }
     ]
@@ -59,12 +59,12 @@
     "products": [
       {
         "name": "SSR",
-        "desc": "SSR. a strong mixture of chemical cleaning solvents, emulsifier, surfactant and mixture of removers with disinfectant power to be able to remove any oil spots, organic spots and stains. It is not corrosive material so can work at any surface.",
+        "desc": "A strong mixture of chemical cleaning solvents, emulsifier, surfactant and mixture of removers with disinfectant power to be able to remove any oil spots, organic spots and stains. It is not corrosive material so can work at any surface.",
         "image": "ssr"
       },
       {
         "name": "SMC",
-        "desc": "SMC. a strong several complex substances antirust, corrosion inhibitor which stabilized for shiny metals.",
+        "desc": "A strong several complex substances antirust, corrosion inhibitor which stabilized for shiny metals.",
         "image": "smc"
       }
     ]
@@ -78,8 +78,8 @@
         "image": "hand_saop"
       },
       {
-        "name": "Hand Soap (Antibacterial)",
-        "desc": "A ready to use hand soap for cleaning, sanitation and moisturizing. effective cleaner & sanitizer against all kinds of microbes, fungi’s, bacteria, viruses. Preserves from infection and contagion.",
+        "name": "Antibacterial Hand Soap",
+        "desc": "A ready to use hand soap for cleaning, sanitation and moisturizing. effective cleaner & sanitizer against all kinds of microbes, fungi, bacteria, viruses. Preserves from infection and contagion.",
         "image": "AB_soap"
       },
       {
@@ -89,7 +89,7 @@
       },
       {
         "name": "Hand Sanitizer (Liquid)",
-        "desc": "A powerful, ready to use hand Sanitizer liquid with two types of sanitizers & skin moisturizer. Effective, broad spectrum against all kinds of microbes, fungi’s, bacteria, viruses.",
+        "desc": "A powerful, ready to use hand Sanitizer liquid with two types of sanitizers & skin moisturizer. Effective, broad spectrum against all kinds of microbes, fungi, bacteria, viruses.",
         "image": "hand_li"
       }
     ]
@@ -99,17 +99,17 @@
     "products": [
       {
         "name": "D-T/11",
-        "desc": "DT-11. a Strong alkaline, low foaming detergent. Effective in the lowest concentration on grease, fats, proteins and scales. DT-11. contains a safe, organic alkaline and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
+        "desc": "A strong alkaline, low foaming detergent. Effective in the lowest concentration on grease, fats, proteins and scales. Contains a safe, organic alkaline and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "dt11"
       },
       {
         "name": "D-T/C",
-        "desc": "DT-C. a Strong acidic medium foaming detergent, Effective in the lowest concentration on salts, scales, grease, fats and proteins as well as metal brightening. DT-C. contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
+        "desc": "A strong acidic medium foaming detergent, Effective in the lowest concentration on salts, scales, grease, fats and proteins as well as metal brightening. Contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "dtc"
       },
       {
         "name": "D-T/N",
-        "desc": "DT-N. a Strong neutral, high foaming detergent. Effective in the lowest concentration on grease, fats, proteins and scales. DT-N. contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
+        "desc": "A strong neutral, high foaming detergent. Effective in the lowest concentration on grease, fats, proteins and scales. Contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "dtn"
       }
     ]
@@ -119,17 +119,17 @@
     "products": [
       {
         "name": "Neutral Foam",
-        "desc": "NEUTRAL FOAM. neutral foam cleaner. Effective in the lowest concentration on grease, fats, proteins and scales. NEUTRAL FOAM. contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
+        "desc": "Neutral foam cleaner. Effective in the lowest concentration on grease, fats, proteins and scales. Contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "n_foam"
       },
       {
         "name": "Acidic Foam",
-        "desc": "ACIDIC FOAM. acidic foam cleaner. Effective in the lowest concentration on salts, scales, grease, fats and proteins as well as metal brightening. ACIDIC FOAM. contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
+        "desc": "Acidic foam cleaner. Effective in the lowest concentration on salts, scales, grease, fats and proteins as well as metal brightening. Contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "ac_foam"
       },
       {
         "name": "Alkaline Foam",
-        "desc": "ALKALINE FOAM. alkaline foam cleaner. Effective in the lowest concentration on grease, fats, proteins and scales. ALKALINE FOAM. contains a safe, organic alkaline and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
+        "desc": "Alkaline foam cleaner. Effective in the lowest concentration on grease, fats, proteins and scales. Contains a safe, organic alkaline and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "ak_foam"
       }
     ]

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center flex-col items-center px-1">
+    <div class="flex justify-center flex-col items-center px-1 pb-5">
         <h2 class="my-5 text-2xl font-semibold text-center">COMPARISON OF D-H/S IONS WITH CHLORINE</h2>
         <div class="shadow-lg rounded overflow-hidden max-w-full">
             <table class="max-w-full border-collapse border border-gray-300">

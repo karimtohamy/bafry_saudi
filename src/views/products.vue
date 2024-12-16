@@ -3,7 +3,7 @@
         <div v-for="item in categories" :key="item.category" class="mb-8">
             <h2 class="text-xl font-semibold mb-2 ms-1">{{ item.category }}</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen">
                 <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`"
                     class="border shadow rounded-lg p-4 flex flex-col items-center justify-center text-center bg-sec text-white relative">
 
@@ -27,7 +27,7 @@
                         {{ product.desc }}
                     </p>
                     <div class="w-full flex justify-start invisible md:invisible lg:visible">
-                        <p class="text-gray-500 text-right text-xs cursor-pointer" @click="openModal(product)">
+                        <p class="text-emerald-500 text-right text-xs cursor-pointer" @click="openModal(product)">
                             {{ $t('more_info') }}
                         </p>
                     </div>
