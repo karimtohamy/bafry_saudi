@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://bafry.de/img/icon-bafry.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://bafry.de/img/icon-bafry.png">
-        <link
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://bafry.de/img/icon-bafry.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://bafry.de/img/icon-bafry.png"
+    />
+    <link
       rel="icon"
       href="/favicon-192x192.png"
       sizes="192x192"
@@ -32,6 +43,28 @@
     <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>Bafry</title>
+    <style>
+      body {
+        --sb-track-color: #232e33;
+        --sb-thumb-color: rgb(16 185 129);;
+        --sb-size: 6px;
+        overflow-y: scroll;
+      }
+
+      body::-webkit-scrollbar {
+        width: var(--sb-size);
+      }
+
+      body::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+        border-radius: 23px;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 23px;
+      }
+    </style>
   </head>
   <body class="h-full">
     <div id="app"></div>

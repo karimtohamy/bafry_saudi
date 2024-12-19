@@ -1,80 +1,125 @@
 <template>
     <div class="max-w-full overflow-x-hidden px-2 lg:px-4 md:px-3 pt-10">
-        <div v-for="item in categories" :key="item.category" class="mb-8">
-            <h2 class="text-xl font-semibold mb-2 ms-1">{{ item.category }}</h2>
+        <!-- Loop through categories -->
+        <div v-for="(item, index) in categories" :key="item.category" class="mb-8">
+            <div class="flex justify-center items-center">
+                <!-- Category Title with Click -->
+                <h2 class="text-xl font-semibold mb-2 text-center cursor-pointer transition-colors duration-300 hover:text-emerald-400"
+                    @click="toggleCategory(item.category, index)">
+                    {{ item.category }}
+                </h2>
+                <!-- Chevron Icon with Rotation -->
+                <ChevronDownIcon class="size-6 mb-1 ms-3 transition-transform duration-300 ease-in-out"
+                    :class="{'rotate-180': activeCategories.includes(item.category),'hidden':index == 0}" />
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen">
-                <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`"
-                    class="border shadow rounded-lg p-4 flex flex-col items-center justify-center text-center bg-sec text-white relative">
+            <!-- Smooth Drawer Transition for Cards -->
+            <transition name="drawer">
+                <div v-show="activeCategories.includes(item.category)"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-hidden transition-all duration-500 ease-in-out">
+                    <!-- Products -->
+                    <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`"
+                        class="border shadow rounded-lg p-4 flex flex-col items-center justify-center text-center bg-sec text-white relative transition-all ease-in">
+                        <!-- Product Name -->
+                        <span class="font-medium">{{ product.name }}</span>
 
-                    <span class="font-medium">{{ product.name }}</span>
+                        <!-- Toggle Description -->
+                        <button @click="toggleDesc(`${item.category}-${index}`)"
+                            class="text-emerald-300 text-xs lg:hidden mt-2 transition-all duration-300 hover:text-emerald-500">
+                            {{ activeDesc === `${item.category}-${index}` ? $t('hide') : $t('more_info') }}
+                        </button>
 
-                    <!-- Toggle Description and Open Modal on 'More Info' Click -->
-                    <button @click="toggleDesc(`${item.category}-${index}`)"
-                        class="text-emerald-300 text-xs lg:hidden mt-2">
-                        {{ showDesc === `${item.category}-${index}` ? $t('hide') : $t('more_info') }}
-                    </button>
+                        <!-- Description Section -->
+                        <transition name="drawer">
+                            <span v-show="activeDesc === `${item.category}-${index}`"
+                                class="text-sm text-white mt-2 lg:hidden transition-all duration-500 ease-in-out">
+                                {{ product.desc }}
+                                <p class="text-xs cursor-pointer hover:underline" @click="openModal(product)">
+                                    {{ $t('more_info') }}
+                                </p>
+                            </span>
+                        </transition>
 
-                    <!-- Description and 'More Info' Link -->
-                    <span v-if="showDesc === `${item.category}-${index}` || !isSmallOrMediumScreen"
-                        class="text-sm text-white mt-2 transition-all lg:hidden">
-                        {{ product.desc }}
-                        <p class="text-xs cursor-pointer" @click="openModal(product)">
-                            {{ $t('more_info') }}
+                        <!-- Always-visible Description on Large Screens -->
+                        <p class="hidden lg:block md:hidden text-sm text-white mt-2">
+                            {{ product.desc }}
                         </p>
-                    </span>
-                    <p class="hidden lg:block md:hidden text-sm text-white mt-2 transition-all">
-                        {{ product.desc }}
-                    </p>
-                    <div class="w-full flex justify-start invisible md:invisible lg:visible">
-                        <p class="text-emerald-500 text-right text-xs cursor-pointer" @click="openModal(product)">
-                            {{ $t('more_info') }}
-                        </p>
+
+                        <!-- "More Info" Link for Large Screens -->
+                        <div class="w-full flex justify-start invisible md:invisible lg:visible">
+                            <p class="text-emerald-500 text-right text-xs cursor-pointer hover:underline"
+                                @click="openModal(product)">
+                                {{ $t('more_info') }}
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </transition>
         </div>
 
-        <!-- Pass selected product data to InfoModal -->
+        <!-- Info Modal -->
         <InfoModal v-model="showModal" :title="selectedProduct?.name" :image="selectedProduct?.image" />
     </div>
 </template>
 
 <script setup>
 import InfoModal from '@/components/ui/infoModal.vue';
+import { ChevronDownIcon } from '@heroicons/vue/24/outline';
 import { onMounted, onUnmounted, ref } from 'vue';
 
-const showDesc = ref(null);
+const activeCategories = ref([]); // Track active categories
+const activeDesc = ref(null);
 const showModal = ref(false);
 const selectedProduct = ref(null);
+const isSmallOrMediumScreen = ref(window.innerWidth < 1024);
+const categories = ref({});
 
-function toggleDesc(id) {
-    showDesc.value = showDesc.value === id ? null : id;
+// Toggle selected category, ensuring the first category is always active
+function toggleCategory(category, index) {
+    if (index === 0) {
+        // Don't allow toggling the first category
+        return;
+    }
+
+    if (activeCategories.value.includes(category)) {
+        // Remove the category if it's already active
+        activeCategories.value = activeCategories.value.filter((item) => item !== category);
+    } else {
+        // Add the category if it's not active
+        activeCategories.value.push(category);
+    }
 }
 
+// Toggle description visibility
+function toggleDesc(id) {
+    activeDesc.value = activeDesc.value === id ? null : id;
+}
+
+// Open modal
 function openModal(product) {
     selectedProduct.value = product;
     showModal.value = true;
 }
 
-function closeModal() {
-    showModal.value = false;
-}
-
-const isSmallOrMediumScreen = ref(window.innerWidth < 1024);
+// Update screen size
 function updateScreenSize() {
     isSmallOrMediumScreen.value = window.innerWidth < 1024;
 }
 
+// Load data based on language
 const lang = localStorage.getItem('preferredLanguage') || 'en';
-const categories = ref({});
 
 onMounted(async () => {
     window.addEventListener('resize', updateScreenSize);
-
     try {
         const categoriesModule = await import(`@/lang/${lang}/categories.json`);
         categories.value = categoriesModule.default;
+
+        // Ensure the first category is always active
+        const categoryKeys = Object.keys(categoriesModule.default);
+        if (categoryKeys.length > 0) {
+            activeCategories.value = [categoriesModule.default[0].category];
+        }
     } catch (error) {
         console.error('Error loading categories:', error);
     }
@@ -85,4 +130,22 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.drawer-enter-active,
+.drawer-leave-active {
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.drawer-enter-from,
+.drawer-leave-to {
+    max-height: 0;
+    opacity: 0;
+}
+
+.drawer-enter-to,
+.drawer-leave-from {
+    max-height: 500px;
+    opacity: 1;
+}
+</style>
