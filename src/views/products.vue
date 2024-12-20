@@ -18,23 +18,19 @@
                 <div v-show="activeCategories.includes(item.category)"
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-hidden transition-all duration-500 ease-in-out">
                     <!-- Products -->
-                    <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`"
-                        class="border shadow rounded-lg p-4 flex flex-col items-center justify-center text-center bg-sec text-white relative transition-all ease-in">
+                    <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`" @click="toggleDesc(`${item.category}-${index}`)"
+                        class="border shadow rounded-lg p-4 select-none flex flex-col items-center justify-center text-center bg-sec text-white relative transition-all ease-in">
                         <!-- Product Name -->
-                        <span class="font-medium">{{ product.name }}</span>
+                        <span class="font-medium select-none ">{{ product.name }}</span>
 
                         <!-- Toggle Description -->
-                        <button @click="toggleDesc(`${item.category}-${index}`)"
-                            class="text-emerald-300 text-xs lg:hidden mt-2 transition-all duration-300 hover:text-emerald-500">
-                            {{ activeDesc === `${item.category}-${index}` ? $t('hide') : $t('more_info') }}
-                        </button>
 
                         <!-- Description Section -->
                         <transition name="drawer">
                             <span v-show="activeDesc === `${item.category}-${index}`"
                                 class="text-sm text-white mt-2 lg:hidden transition-all duration-500 ease-in-out">
                                 {{ product.desc }}
-                                <p class="text-xs cursor-pointer hover:underline" @click="openModal(product)">
+                                <p class="text-xs cursor-pointer text-emerald-500 hover:underline" @click="openModal(product)">
                                     {{ $t('more_info') }}
                                 </p>
                             </span>

@@ -22,12 +22,14 @@
             <p class="text-xl px-1">{{ $t('mission_p') }}</p>
         </div>
     </div>
-    <div
-            class="shadow-lg py-10 w-1/2 mb-10 rounded-lg flex px-3 mx-auto text-center  flex-col bg-slate-300/10 text-black jsutify-center items-center">
-            <img src="@/assets/badge.svg" alt="" class="size-11 mb-2">
+    <div class="w-full flex justify-center lg:px-52 px-12 mb-6">
+        <div class=" shadow-lg flex flex-col items-center text-center  py-12 rounded-lg px-5">
 
-            <h1 class="text-2xl font-semibold mb-3">{{ $t('new_sec') }}</h1>
+            <img src="@/assets/badge.svg" alt="" class="size-11 mb-2">
+            
+            <h1 class="text-2xl text-center font-semibold mb-3">{{ $t('new_sec') }}</h1>
             <p class="text-xl px-1">{{ $t('new_sec_p') }}</p>
+        </div>
         </div>
     </div>
 
