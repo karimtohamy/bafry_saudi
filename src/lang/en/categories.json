@@ -3,14 +3,19 @@
     "category": "Disinfectants",
     "products": [
       {
-        "name": "D-H/S Ions",
+        "name": "D-H-S Ions",
         "desc": "The Latest Exclusive Multipurpose Disinfectant, hydrogen peroxide (50%) & silver ions. Long acting broad spectrum against spores, fungi, bacteria, viruses, algae, bio film. Food grade, nontoxic, non-carcinogenic, non-mutagenic.",
         "image": "dhs"
       },
       {
-        "name": "D-Q/A Cloud",
+        "name": "D-Q-A Cloud",
         "desc": "New innovation nanotechnology disinfectant, Quaternary ammonium compound & Branched alcohol. Strong against spores, fungi, bacteria, viruses, algae. Food grade, nontoxic",
         "image": "dqa"
+      },
+      {
+        "name":"D-1",
+        "desc":"The Latest Exclusive Multipurpose Disinfectant, hydrogen peroxide (50 %) & silver ions. D-H-S IONS. long acting broad spectrum against spores, fungi’s, bacteria, viruses, algae and bio film. D-H-S IONS. food grade, nontoxic, non-carcinogenic and non-mutagenic.",
+        "image":"d1"
       },
       {
         "name": "Anti Keime",
@@ -38,17 +43,17 @@
         "image": "pdo"
       },
       {
-        "name": "P-D/L",
+        "name": "PD-L",
         "desc": "A strong Pre-Disinfectant Alkaline cleaner, low foaming Effective in the lowest concentration on grease, fats, proteins and scales. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdl"
       },
       {
-        "name": "P-D/N",
+        "name": "PD-N",
         "desc": "A strong Pre-Disinfectant neutral cleaner, highly foaming, Effective in the lowest concentration on grease, fats, proteins and scales. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdn"
       },
       {
-        "name": "P-D/Powder",
+        "name": "PD-Powder",
         "desc": "A strong Alkaline pre disinfectant powder with acidic media. Effective in the lowest concentration on salts, scales, grease, fats and proteins. Free from dangerous and harmful substances for health & production lines.",
         "image": "pdp"
       }
@@ -98,17 +103,17 @@
     "category": "Detergents",
     "products": [
       {
-        "name": "D-T/11",
+        "name": "DT-11",
         "desc": "A strong alkaline, low foaming detergent. Effective in the lowest concentration on grease, fats, proteins and scales. Contains a safe, organic alkaline and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "dt11"
       },
       {
-        "name": "D-T/C",
+        "name": "DT-C",
         "desc": "A strong acidic medium foaming detergent, Effective in the lowest concentration on salts, scales, grease, fats and proteins as well as metal brightening. Contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "dtc"
       },
       {
-        "name": "D-T/N",
+        "name": "DT-N",
         "desc": "A strong neutral, high foaming detergent. Effective in the lowest concentration on grease, fats, proteins and scales. Contains a safe, organic acid and is phosphate-free, so it will not interfere with sensitive equipment or testing procedures.",
         "image": "dtn"
       }

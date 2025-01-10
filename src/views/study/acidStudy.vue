@@ -1,6 +1,9 @@
 <template>
-    <div class="flex justify-center flex-col items-center pb-6 mx-2">
-        <h1 class="my-5 text-2xl font-semibold text-center">{{$t('comparison_title')}}</h1>
+    <div class="flex justify-center flex-col items-center pb-6 mx-2 relative mt-1">
+        <router-link :to="{name:'studies.index'}" class="absolute top-16 left-10 invisible md:invisible lg:visible">
+            <ArrowLeftCircleIcon class="size-10"/>
+        </router-link>
+        <h1 class="mt-5 text-2xl font-semibold text-center">{{$t('comparison_title')}}</h1>
 
         <div class="overflow-x-auto rounded shadow-lg">
             <table class="max-w-full border-collapse border border-gray-300 mt-4">
@@ -79,6 +82,8 @@
 </template>
 
 <script setup>
+import { ArrowLeftCircleIcon } from '@heroicons/vue/24/outline';
+
 </script>
 
 <style lang="scss" scoped></style>

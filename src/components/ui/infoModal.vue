@@ -40,7 +40,7 @@ import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } fro
 const props = defineProps({
     title: String,
     modelValue: Boolean,
-    image: String // Image basename with extension (e.g., 'product1.jpg')
+    image: String 
 });
 
 const emit = defineEmits(['update:modelValue']);
@@ -71,7 +71,8 @@ const imageMap = {
     "dtn": () => import('@/assets/products/dtn.png'),
     "n_foam": () => import('@/assets/products/n_foam.png'),
     "ac_foam": () => import('@/assets/products/ac_foam.png'),
-    "ak_foam": () => import('@/assets/products/ak_foam.png')
+    "ak_foam": () => import('@/assets/products/ak_foam.png'),
+    "d1":()=>import('@/assets/products/d1.png')
 };
 watchEffect(() => {
     if (props.image && imageMap[props.image]) {

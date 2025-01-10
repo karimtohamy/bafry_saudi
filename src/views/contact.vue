@@ -1,7 +1,7 @@
 <template>
-    <div class="flex justify-center items-center w-full h-full pt-10 lg:pt-8 px-4">
+    <div class="flex justify-center items-center w-full h-full py-7 lg:pt-8 px-4">
         <div
-            class="rounded-lg shadow-lg flex flex-col lg:flex-row lg:mx-10 w-full p-6 sm:p-10 md:p-12 lg:p-16 justify-between items-center bg-primary overflow-hidden">
+            class="rounded-lg shadow-lg flex flex-col lg:flex-row lg:mx-10 w-full p-6 sm:p-10 md:p-12 lg:p-11 justify-between items-center bg-primary overflow-hidden">
             <div class="min-h-full flex items-center order-2 lg:order-1 flex-col w-auto lg:w-96 md:w-full">
                 <!-- Buttons to switch between map locations -->
                 <div class="mb-6 grid grid-cols-2 gap-4 w-full">
@@ -24,7 +24,6 @@
                     <a :href="link" class="text-white underline">{{ $t(add_key) }}</a>
                 </div>
             </div>
-
             <!-- Contact Form -->
             <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-6">
                 <div class="mb-7 text-white text-xl">{{ $t('contact_email') }}</div>

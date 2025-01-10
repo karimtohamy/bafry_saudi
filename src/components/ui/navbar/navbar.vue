@@ -1,5 +1,5 @@
 <template>
-    <header class="max-w-screen shadow-lg text-white">
+    <header class="max-w-screen shadow-lg text-white select-none">
         <div class="bg-primary hidden invisible lg:visible lg:flex w-full items-center justify-center top-0 py-2">
             <router-link class="absolute" :class="[currentLanguage == 'ar' ? 'right-6' : 'left-6']"
                 :to="{ name: 'home', params: { lang: currentLanguage } }">
