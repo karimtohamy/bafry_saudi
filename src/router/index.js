@@ -97,7 +97,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const lang = to.params.lang || 'en';  // Use the lang from the URL
   i18n.global.locale = lang; 
-  document.title = i18n.global.t(to.name) || '404'; 
+  document.title = 'Bafry | '+i18n.global.t(to.name) || '404'; 
   next();
 });
 
