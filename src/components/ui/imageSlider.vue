@@ -5,7 +5,7 @@
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <!-- Slide Content -->
     <div class="relative text-white">
-      <img :src="logo" alt="Company logo"
+      <img :src="Logo" alt="Company Logo"
         class="h-60 mx-auto absolute -top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
       <p class="text-lg mb-7 md:text-xl text-center w-full md:w-1/2 mx-auto px-4">
         {{ $t('home_p') }}
@@ -26,7 +26,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import logo from '@/assets/images/Logo.png'; // Import logo image for direct use
+import Logo from '@/assets/images/Logo.png'; // Import Logo image for direct use
 import image1 from '@/assets/images/iStock-939983060.jpg'; // Import images directly
 import image2 from '@/assets/images/iStock-1293325404.jpg';
 

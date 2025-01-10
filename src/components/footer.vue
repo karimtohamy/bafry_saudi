@@ -22,7 +22,7 @@
 
         <div
             class="absolute lg:inset-0 md:inset-0 end-6 top-5  select-none items-center justify-center  lg:flex md:flex">
-            <img src="@/assets/images/logo.png" alt="" class="w-32 h-32">
+            <img src="@/assets/images/Logo.png" alt="" class="w-32 h-32">
         </div>
 
         <div class="order-1">

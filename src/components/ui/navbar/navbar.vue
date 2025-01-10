@@ -4,7 +4,7 @@
             <router-link class="absolute" :class="[currentLanguage == 'ar' ? 'right-6' : 'left-6']"
                 :to="{ name: 'home', params: { lang: currentLanguage } }">
 
-                <img src="@/assets/images/logo.png" alt="" class=" h-28">
+                <img src="@/assets/images/Logo.png" alt="" class=" h-28">
             </router-link>
             <div class="w-full  flex h-12 justify-center items-center">
                 <NavLinks v-for="(item, index) in navItems" :currnetlang="currentLanguage" :key="index" :to="item.to"
@@ -24,7 +24,7 @@
                 </a>
                 <router-link :to="{name:'home'}">
 
-                    <img src="@/assets/images/logo.png" alt="Logo" class=" h-14 me-3" />
+                    <img src="@/assets/images/Logo.png" alt="Logo" class=" h-14 me-3" />
                 </router-link>
             </div>
         </div>
