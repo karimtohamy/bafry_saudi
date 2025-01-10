@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Pages -->
+  <url>
+    <loc>https://bafry.sa/en/home</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/home</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Products Pages -->
+  <url>
+    <loc>https://bafry.sa/en/products</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/products</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Studies Pages -->
+  <url>
+    <loc>https://bafry.sa/en/studies</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/studies</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Individual Study Pages -->
+  <url>
+    <loc>https://bafry.sa/en/studies/chlorine-study</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/studies/chlorine-study</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://bafry.sa/en/studies/peracetic-acid-study</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/studies/peracetic-acid-study</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://bafry.sa/en/studies/study-in-fish</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/studies/study-in-fish</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- FAQ Pages -->
+  <url>
+    <loc>https://bafry.sa/en/faq</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/faq</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Contact Us Pages -->
+  <url>
+    <loc>https://bafry.sa/en/contact-us</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/contact-us</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Tools Pages -->
+  <url>
+    <loc>https://bafry.sa/en/tools</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/tools</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Redirect and Catch-all Pages -->
+  <url>
+    <loc>https://bafry.sa/en/404</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://bafry.sa/ar/404</loc>
+    <lastmod>2025-01-10</lastmod>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
