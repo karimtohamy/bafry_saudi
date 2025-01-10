@@ -15,7 +15,7 @@ import NotFound from '@/views/404.vue'
 
 // Create router
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/:lang(ar|en)', // Dynamic language in path
