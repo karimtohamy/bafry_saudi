@@ -5,7 +5,10 @@
                 class="shadow-lg rounded flex flex-col items-center justify-center p-5 bg-sec text-white hover:scale-110 transition-all">
                 <img :src="tool.imgSrc" alt="">
                 <p>{{ tool.name }}</p>
-                <p>{{ tool.details }}</p>
+                <div class="text-center mt-1">
+
+                    <p>{{ tool.details }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -85,13 +88,13 @@ const tools_ar = [
         id: "strips100",
         imgSrc: "https://bafry.de/img/peroxid.png",
         name: "اختبار بيفري",
-        details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق لحمض البيرأسيتيك في المحاليل. يوفر الإجراء البسيط غمس وقراءة نتائج آمنة في غضون 30 ثانية."
+        details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق بيروكسيد الهيدروجين في المحاليل. يوفر الإجراء البسيط غمس وقراءة نتائج آمنة في غضون 30 ثانية."
     },
     {
         id: "quat",
         imgSrc: "https://bafry.de/img/quat.png",
         name: "اختبار الكوات",
-        details: "هذه الأشرطة مخصصة للتحديد السريع والموثوق لمركبات الأمونيوم الرباعية (QUAT) في المحاليل. يوفر الإجراء البسيط غمس وقراءة نتيجة موثوقة خلال 15 ثانية."
+details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق لمركبات الأمونيوم الرباعية  (QUAT) في المحاليل. يوفر الإجراء البسيط غمس وقراءة، نتيجة موثوقة خلال 15 ثانية."
     }
 ];
 
