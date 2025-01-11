@@ -1,7 +1,7 @@
 {
     "ch_title":"مقارنة بين الدي-إتش/إس أيونز و الكلور",
     "property": "الخاصية",
-    "dh_s_ions": "أيونات الدي-إتش/إس",
+    "dh_s_ions": "الدي-إتش/إس أيونز",
     "chlorine": "الكلور",
     "long_term_effect": "التأثير طويل الأمد",
     "very_long": "طويل للغاية",
@@ -14,7 +14,7 @@
     "neutral_ph": "الرقم الهيدروجيني المحايدة",
     "neutral": "محايد",
     "change_of_ph_of_the_treated_water": "تغير الرقم الهيدروجيني في المياه المعالجة",
-    "contact_time": "مدة الاتصال",
+    "contact_time": "وقت التفاعل",
     "short": "قصير",
     "retarded_efficiency_through_organic_materials": "تأثير المواد العضوية على الكفاءة",
     "yes": "نعم",
