@@ -22,8 +22,8 @@
             <p class="text-xl px-1">{{ $t('mission_p') }}</p>
         </div>
     </div>
-    <div class="w-full flex justify-center lg:px-52 px-12 mb-6">
-        <div class=" shadow-lg flex flex-col items-center text-center  py-12 rounded-lg px-5">
+    <div class="w-full flex justify-center lg:px-52 px-12 mb-6 bg-slate-300/10">
+        <div class=" shadow-lg flex flex-col items-center text-center  py-12 rounded-lg px-5 bg-slate-300/10">
 
             <img src="@/assets/badge.svg" alt="" class="size-11 mb-2">
             
