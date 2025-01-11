@@ -55,7 +55,7 @@ const tools_en = [
         id: "quat",
         imgSrc: "https://bafry.de/img/quat.png",
         name: "Quat test",
-        details: "These test strips are for the rapid and reliable determination of quaternary ammonium compounds (QUAT) in solutions. The easy dip-and-read procedure provides a reliable result within 15 seconds."
+        details: "This strip tsets are for the rapid and reliable determination of quaternary ammonium compounds (QUAT) in solutions. The easy dip-and-read procedure provides a reliable result within 15 seconds."
     }
 ];
 
@@ -94,7 +94,7 @@ const tools_ar = [
         id: "quat",
         imgSrc: "https://bafry.de/img/quat.png",
         name: "اختبار الكوات",
-details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق لمركبات الأمونيوم الرباعية  (QUAT) في المحاليل. يوفر الإجراء البسيط غمس وقراءة، نتيجة موثوقة خلال 15 ثانية."
+        details: "شريط الاختبار هذا مخصص للتحديد السريع والموثوق لمركبات الأمونيوم الرباعية  (QUAT) في المحاليل. يوفر الإجراء البسيط غمس وقراءة، نتيجة موثوقة خلال 15 ثانية."
     }
 ];
 
