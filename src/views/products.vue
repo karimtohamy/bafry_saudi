@@ -2,15 +2,15 @@
     <div class="max-w-full overflow-x-hidden px-2 lg:px-4 md:px-3 pt-10">
         <!-- Loop through categories -->
         <div v-for="(item, index) in categories" :key="item.category" class="mb-8">
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center hover:text-emerald-400 "@click="toggleCategory(item.category, index)">
                 <!-- Category Title with Click -->
-                <h2 class="text-xl font-semibold mb-2 text-center cursor-pointer transition-colors duration-300 hover:text-emerald-400"
-                    @click="toggleCategory(item.category, index)">
+                <h2 class="text-xl font-semibold mb-2 text-center cursor-pointer transition-colors duration-300 "
+                    >
                     {{ item.category }}
                 </h2>
                 <!-- Chevron Icon with Rotation -->
-                <ChevronDownIcon class="size-6 mb-1 ms-3 transition-transform duration-300 ease-in-out"
-                    :class="{'rotate-180': activeCategories.includes(item.category),'hidden':index == 0}" />
+                <ChevronDownIcon class="size-6 mb-1 ms-3 transition-transform duration-300 ease-in-out hover:text-emerald-400"
+                    :class="{'rotate-180': activeCategories.includes(item.category),'hidden':index == 0}" @click="toggleCategory(item.category, index)" />
             </div>
 
             <!-- Smooth Drawer Transition for Cards -->
@@ -19,13 +19,13 @@
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-hidden transition-all duration-500 ease-in-out">
                     <!-- Products -->
                     <div v-for="(product, index) in item.products" :key="`${item.category}-${index}`" @click="toggleDesc(`${item.category}-${index}`)"
-                        class="border shadow rounded-lg p-4 select-none flex flex-col items-center justify-center text-center bg-sec text-white relative transition-all ease-in">
+                        class="border shadow rounded-lg p-4 select-none flex flex-col items-center justify-center text-center bg-sec text-white relative transition-all ease-in ">
                         <!-- Product Name -->
                         <span class="font-medium select-none ">{{ product.name }}</span>
 
                         <!-- Toggle Description -->
 
-                        <!-- Description Section -->
+                        <!-- Description Section for mobile -->
                         <transition name="drawer">
                             <span v-show="activeDesc === `${item.category}-${index}`"
                                 class="text-sm text-white mt-2 lg:hidden transition-all duration-500 ease-in-out">
@@ -37,12 +37,12 @@
                         </transition>
 
                         <!-- Always-visible Description on Large Screens -->
-                        <p class="hidden lg:block md:hidden text-sm text-white mt-2">
+                        <p class="hidden lg:block md:hidden text-sm text-white mt-2 ">
                             {{ product.desc }}
                         </p>
 
                         <!-- "More Info" Link for Large Screens -->
-                        <div class="w-full flex justify-start invisible md:invisible lg:visible">
+                        <div class="w-full lg:flex hidden justify-center ">
                             <p class="text-emerald-500 text-right text-xs cursor-pointer hover:underline"
                                 @click="openModal(product)">
                                 {{ $t('more_info') }}
